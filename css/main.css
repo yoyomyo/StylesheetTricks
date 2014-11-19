@@ -1,65 +1,12 @@
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+background: #b3d4fc;
+text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between images, videos, audio and canvas and the bottom of
- * their containers: h5bp.com/i/440
- */
-
-audio,
-canvas,
-img,
-video {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
+background: #b3d4fc;
+text-shadow: none;
 }
 
 html {
@@ -87,153 +34,111 @@ h1 {
 	padding: 0 10px;
 }
 
-.site-promo {
-	padding: 4em 0 6em;
+.description {
+    color: #2f3135;
+    font-size: 1.2em;
 }
 
-.site-promo .description {
-	color: #2f3135;
-	font-size: 1.2em;
-	margin: 1em 2em 0;
-	
-}
-
-.logo{
-	font-size: 2em;
-}
-
-.logo .left{
-	color: #552793;
-}
-
-.logo .right{
-	color: #771bff;
-}
-
-.logo svg{
-	width: 100%;
-	height: 100%;
+.logo {
+    height: 450px;
+    position: relative;
 }
 
 .box {
 	font-family: Menlo;
-	font-size: 400px;
+	font-size: 500px;
 	font-weight: 700;
 	overflow: hidden;
 	display: inline;
-	margin: -140px;
+}
+
+
+
+#right{
+    position: absolute;
+    color: #771bff;
+    left: 370px;
+    top: -90px;
+    -webkit-transform-origin: 49% 52%;
+    -webkit-transform: rotate(30deg); 
+    -moz-transform-origin: 49% 52%;
+    -moz-transform: rotate(30deg);
+
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+  	
+    -webkit-animation-duration: 2s;
+    -webkit-animation-name: rotate-right;
+    -moz-animation-duration: 2s;
+    -moz-animation-name: rotate-right;
+}
+
+@-webkit-keyframes rotate-right {
+    0%   
+    { 
+        transform: rotate(30deg);
+    }
+    20%   
+    { 
+        transform: rotate(90deg);
+    }
+    40%   
+    { 
+        transform: rotate(150deg);
+    }
+    60%   
+    { 
+        transform: rotate(210deg);
+    }
+    80% 
+    { 
+        transform: rotate(270deg);
+    }
+    100% 
+    { 
+        transform: rotate(330deg);
+    }
 }
 
 #left{
-	color: #552793;
-}
-
-.box:nth-child(2):hover #right{
-	transform: rotate(30deg);
-	transition: all 0.5s ease;
-}
-
-#right{
-	color: #771bff;
-	-webkit-transform: rotate(50deg);
-}
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Image replacement
- */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
     position: absolute;
-    width: 1px;
+    color: #552793;
+    left: 135px;
+    top: -90px;
+    
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+ 
+    -webkit-transform-origin: 49% 52%;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-name: rotate-left;
+    -moz-animation-duration: 2s;
+    -moz-animation-name: rotate-left;
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-    zoom: 1;
+@-webkit-keyframes rotate-left {
+    0%   
+    { 
+        transform: rotate(0deg);
+    }
+    20%   
+    { 
+        transform: rotate(-60deg);
+    }
+    40%   
+    { 
+        transform: rotate(-120deg);
+    }
+    60%   
+    { 
+        transform: rotate(-180deg);
+    }
+    80% 
+    { 
+        transform: rotate(-240deg);
+    }
+    100% 
+    { 
+        transform: rotate(-300deg);
+    }
 }
