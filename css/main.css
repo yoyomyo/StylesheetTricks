@@ -52,38 +52,23 @@ h1 {
 	display: inline;
 }
 
-
-
 #right{
     position: absolute;
     color: #771bff;
+    -webkit-transform: rotate(30deg); 
     left: 360px;
     top: -90px;
 }
 
-.logo:hover #right{
-     -webkit-transform-origin: 50.5% 53%;
-    -webkit-transform: rotate(30deg); 
-    -moz-transform-origin: 49% 52%;
-    -moz-transform: rotate(30deg);
+.active #right{
+    -webkit-transform-origin: 50.5% 53.5%;
+    -webkit-animation: rotate-right 3s infinite ease-out forwards;
 
-    -webkit-animation-delay: 0.5s;
-    -webkit-animation-iteration-count: infinite;
-    
-    -webkit-animation-duration: 2.5s;
-    -webkit-animation-name: rotate-right;
-    -moz-animation-duration: 2.5s;
-    -moz-animation-name: rotate-right;
-
-    -webkit-animation-direction: alternate;
-    -webkit-animation-timing-function: ease-out;
-    -webkit-animation-fill-mode: forwards;
 }
 
-
 @-webkit-keyframes rotate-right {
-    0%   
-    { 
+    0% 
+    {
         transform: rotate(30deg);
     }
     10%   
@@ -128,19 +113,9 @@ h1 {
     }
 }
 
-.logo:hover #left{
-    -webkit-animation-delay: 0.5s;
-    -webkit-animation-iteration-count: infinite;
- 
-    -webkit-transform-origin: 50.5% 53%;
-    -webkit-animation-duration: 2.5s;
-    -webkit-animation-name: rotate-left;
-    -moz-animation-duration: 2.5s;
-    -moz-animation-name: rotate-left;
-
-    -webkit-animation-direction: alternate;
-    -webkit-animation-timing-function: ease-out;
-    -webkit-animation-fill-mode: forwards;
+.active #left{
+    -webkit-transform-origin: 50% 53.5%;
+    -webkit-animation: rotate-left 3s infinite ease-out forwards;
 }
 
 #left{
@@ -148,8 +123,6 @@ h1 {
     color: #552793;
     left: 135px;
     top: -90px;
-    
-
 }
 
 @-webkit-keyframes rotate-left {
