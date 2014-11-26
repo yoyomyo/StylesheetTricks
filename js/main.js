@@ -10,6 +10,8 @@ $(".logo").hover(
 		startAnimation();
 	},
 	function(){
+		console.log("angle: " + angle);
+		//angle left should find out if angle is 30 or 0
 		var angleLeft = cycle - (angle % cycle);
 		var cycleLeft = angleLeft  / stepSize;
 		console.log("angle left: " + angleLeft);
